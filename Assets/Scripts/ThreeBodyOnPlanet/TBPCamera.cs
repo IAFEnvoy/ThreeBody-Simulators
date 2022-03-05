@@ -5,10 +5,8 @@ public class TBPCamera : MonoBehaviour
 {
   enum RotationAxes { MouseXAndY, MouseX, MouseY }
   RotationAxes axes = RotationAxes.MouseXAndY;
-  float sensitivityX = 15;
-  float sensitivityY = 15;
-  float minimumY = -80;
-  float maximumY = 80;
+  float sensitivityX = 15, sensitivityY = 15;
+  float minimumY = -80, maximumY = 80;
   private float rotationY = 0;
   public static GameObject planet = null;
 

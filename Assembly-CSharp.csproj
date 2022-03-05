@@ -76,27 +76,6 @@
      <Compile Include="Assets\Scripts\ThreeBody\TBKeyBoardControl.cs" />
      <Compile Include="Assets\Scripts\ThreeBody\ButtonMethods\TBSave.cs" />
      <Compile Include="Assets\Scripts\DarkForest\HighLightControls\HighLightControlRed.cs" />
-     <Compile Include="Assets\SlimUI\Tech Menu\Scripts\UIElementDragger.cs" />
-     <Compile Include="Assets\SlimUI\Tech Menu\Scripts\ToolTip.cs" />
-     <Compile Include="Assets\SlimUI\Tech Menu\Scripts\UIManagerTech.cs" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\SlimUI\READ ME.txt" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\SlimUI\Tech Menu\Shaders\Blur.shader" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\SlimUI\Tech Menu\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Program Files\Unity 2020.3.30f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

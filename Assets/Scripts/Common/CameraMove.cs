@@ -4,6 +4,7 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
   public static double a, b, distance;
+  public static bool enable = true;
 
   private void Start()
   {
@@ -11,7 +12,7 @@ public class CameraMove : MonoBehaviour
     setplace((float)Math.Cos(a) * (float)Math.Cos(b) * (float)distance, (float)Math.Sin(b) * (float)distance, (float)Math.Sin(a) * (float)Math.Cos(b) * (float)distance);
     transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(new Vector3(0, 0, 0) - transform.position), 10);
   }
-  
+
   public void setplace(float x, float y, float z)
   {
     Vector3 vec = new Vector3(x, y, z);
@@ -25,6 +26,7 @@ public class CameraMove : MonoBehaviour
 
   private void Update()
   {
+    if (!enable) return;
     if (Input.GetMouseButtonDown(0))
     {
       now = Input.mousePosition;

@@ -15,6 +15,8 @@ public class DFKeyBoardControl : MonoBehaviour
   }
   void Update()
   {
+    CameraMove.enable = GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().alpha == 0;
+    CameraMove.enable &= GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().alpha == 0;
     if (Input.GetKeyDown(KeyCode.Escape))
       if (GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().alpha == 1)
       {
