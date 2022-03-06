@@ -8,29 +8,35 @@ public class TBKeyBoardControl : MonoBehaviour
   private void Start()
   {
     mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
-    text = GameObject.Find("Canvas/UI/Stats").GetComponent<Text>();
-    GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().alpha = 0;
-    GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().interactable = false;
-    GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().blocksRaycasts = false;
+    text = GameObject.Find("UI/Stats").GetComponent<Text>();
+    GameObject.Find("Menu").GetComponent<CanvasGroup>().alpha = 0;
+    GameObject.Find("Menu").GetComponent<CanvasGroup>().interactable = false;
+    GameObject.Find("Menu").GetComponent<CanvasGroup>().blocksRaycasts = false;
+    CameraMove.enable = true;
   }
   private void Update()
   {
-    CameraMove.enable = GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().alpha == 0;
-    CameraMove.enable &= GameObject.Find("Canvas/Starter").GetComponent<CanvasGroup>().alpha == 0;
+    CameraMove.enable = !GameObject.Find("Menu").GetComponent<CanvasGroup>().interactable && !GameObject.Find("Starter").GetComponent<CanvasGroup>().interactable;
     if (Input.GetKeyDown(KeyCode.Escape))
     {
-      if (GameObject.Find("Canvas/Starter").GetComponent<CanvasGroup>().alpha == 1)
+      if (GameObject.Find("Starter").GetComponent<CanvasGroup>().alpha == 1)
       {
-        GameObject.Find("Canvas/Starter").GetComponent<CanvasGroup>().alpha = 0;
-        GameObject.Find("Canvas/Starter").GetComponent<CanvasGroup>().interactable = false;
-        GameObject.Find("Canvas/Starter").GetComponent<CanvasGroup>().blocksRaycasts = false;
+        GameObject.Find("Starter").GetComponent<CanvasGroup>().alpha = 0;
+        GameObject.Find("Starter").GetComponent<CanvasGroup>().interactable = false;
+        GameObject.Find("Starter").GetComponent<CanvasGroup>().blocksRaycasts = false;
       }
       else
       {
-        GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().alpha = 1 - GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().alpha;
-        GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().interactable = !GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().interactable;
-        GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().blocksRaycasts = !GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().blocksRaycasts;
+        GameObject.Find("Menu").GetComponent<CanvasGroup>().alpha = 1 - GameObject.Find("Menu").GetComponent<CanvasGroup>().alpha;
+        GameObject.Find("Menu").GetComponent<CanvasGroup>().interactable ^= true;
+        GameObject.Find("Menu").GetComponent<CanvasGroup>().blocksRaycasts ^= true;
       }
+    }
+    if (Input.GetKeyDown(KeyCode.H))
+    {
+      GameObject.Find("UI").GetComponent<CanvasGroup>().alpha = 1 - GameObject.Find("UI").GetComponent<CanvasGroup>().alpha;
+      GameObject.Find("UI").GetComponent<CanvasGroup>().interactable ^= true;
+      GameObject.Find("UI").GetComponent<CanvasGroup>().blocksRaycasts ^= true;
     }
     if (Input.GetKeyDown(KeyCode.Alpha1))
     {

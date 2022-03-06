@@ -1,4 +1,4 @@
-﻿class global
+﻿class DFGlobal
 {
     public static int startcnt = 0;//初始文明数量
     public static int startscore = 0;//初始得分

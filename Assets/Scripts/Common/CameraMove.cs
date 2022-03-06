@@ -23,6 +23,7 @@ public class CameraMove : MonoBehaviour
   }
 
   private Vector2 now = new Vector2();
+  private float touchDistance = -1;
 
   private void Update()
   {
@@ -55,6 +56,17 @@ public class CameraMove : MonoBehaviour
       if (distance < 50)
         distance = 50;
     }
+    if ((Input.touchCount == 2) && (Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(1).phase == TouchPhase.Moved))
+      if (touchDistance == -1)
+        touchDistance = Vector2.Distance(Input.GetTouch(0).position, Input.GetTouch(1).position);
+      else
+      {
+        float newDistance = Vector2.Distance(Input.GetTouch(0).position, Input.GetTouch(1).position);
+        distance -= (newDistance - touchDistance) * 20;
+        touchDistance = newDistance;
+      }
+    else
+      touchDistance = -1;
     setplace((float)Math.Cos(a) * (float)Math.Cos(b) * (float)distance, (float)Math.Sin(b) * (float)distance, (float)Math.Sin(a) * (float)Math.Cos(b) * (float)distance);
   }
 }

@@ -1,4 +1,4 @@
-internal class TBInit
+internal class TBGlobal
 {
     public static double m1 = 250, x1 = -100, y1 = 75, z1 = 0, vx1 = 0, vy1 = 0, vz1 = 20;
     public static double m2 = 250, x2 = 0, y2 = 0, z2 = 10, vx2 = 0, vy2 = -5, vz2 = 0;

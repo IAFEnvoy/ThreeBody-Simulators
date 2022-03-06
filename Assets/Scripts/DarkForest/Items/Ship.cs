@@ -15,7 +15,7 @@ class Ships
         if (startstar.type == 1) type = 1;
         if (startstar.type == -1)
         {
-            if (targetstar.type == 1) if (global.allow_attack_help) type = 0; else type = 1;
+            if (targetstar.type == 1) if (DFGlobal.allow_attack_help) type = 0; else type = 1;
             if (targetstar.type == -1) type = 0;
             if (targetstar.type == 0) type = 0;
         }
@@ -26,7 +26,7 @@ class Ships
             if (targetstar.type == 0) type = -1;
         }
 
-        float asd = (float)(total / global.travel_speed);
+        float asd = (float)(total / DFGlobal.travel_speed);
         this.directionx = (targetstar.x - startstar.x) / asd;
         this.directiony = (targetstar.y - startstar.y) / asd;
         this.directionz = (targetstar.z - startstar.z) / asd;

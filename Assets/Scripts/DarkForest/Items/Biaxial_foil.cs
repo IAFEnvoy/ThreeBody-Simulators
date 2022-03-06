@@ -13,7 +13,7 @@ class Biaxial_foil//二向箔
         this.total = Math.Sqrt((startstar.x - targetstar.x) * (startstar.x - targetstar.x)
             + (startstar.y - targetstar.y) * (startstar.y - targetstar.y) + (startstar.z - targetstar.z) * (startstar.z - targetstar.z));
 
-        float asd = (float)(total / global.speed2d);
+        float asd = (float)(total / DFGlobal.speed2d);
         this.directionx = (targetstar.x - startstar.x) / asd;
         this.directiony = (targetstar.y - startstar.y) / asd;
         this.directionz = (targetstar.z - startstar.z) / asd;

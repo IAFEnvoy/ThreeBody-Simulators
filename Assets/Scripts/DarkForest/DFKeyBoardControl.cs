@@ -6,29 +6,29 @@ public class DFKeyBoardControl : MonoBehaviour
 {
   void Start()
   {
-    GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().alpha = 0;
-    GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().interactable = false;
-    GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().blocksRaycasts = false;
-    GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().alpha = 0;
-    GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().interactable = false;
-    GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().blocksRaycasts = false;
+    GameObject.Find("Menu").GetComponent<CanvasGroup>().alpha = 0;
+    GameObject.Find("Menu").GetComponent<CanvasGroup>().interactable = false;
+    GameObject.Find("Menu").GetComponent<CanvasGroup>().blocksRaycasts = false;
+    CameraMove.enable = true;
   }
   void Update()
   {
-    CameraMove.enable = GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().alpha == 0;
-    CameraMove.enable &= GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().alpha == 0;
+    CameraMove.enable = GameObject.Find("Menu").GetComponent<CanvasGroup>().alpha == 0;
+    CameraMove.enable &= GameObject.Find("Setting").GetComponent<CanvasGroup>().alpha == 0;
     if (Input.GetKeyDown(KeyCode.Escape))
-      if (GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().alpha == 1)
+      if (GameObject.Find("Setting").GetComponent<CanvasGroup>().alpha == 1)
       {
-        GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().alpha = 0;
-        GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().interactable = !GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().interactable;
-        GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().blocksRaycasts = !GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().blocksRaycasts;
+        GameObject.Find("Setting").GetComponent<CanvasGroup>().alpha = 0;
+        GameObject.Find("Setting").GetComponent<CanvasGroup>().interactable = false;
+        GameObject.Find("Setting").GetComponent<CanvasGroup>().blocksRaycasts = false;
+        CameraMove.enable = true;
       }
       else
       {
-        GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().alpha = 1 - GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().alpha;
-        GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().interactable = !GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().interactable;
-        GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().blocksRaycasts = !GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().blocksRaycasts;
+        GameObject.Find("Menu").GetComponent<CanvasGroup>().alpha = 1 - GameObject.Find("Menu").GetComponent<CanvasGroup>().alpha;
+        GameObject.Find("Menu").GetComponent<CanvasGroup>().interactable ^= true;
+        GameObject.Find("Menu").GetComponent<CanvasGroup>().blocksRaycasts ^= true;
+        CameraMove.enable ^= true;
       }
     if (Input.GetKeyDown(KeyCode.Space))
       DFCalculate.execute = !DFCalculate.execute;
@@ -70,14 +70,15 @@ public class DFKeyBoardControl : MonoBehaviour
     }
     if (Input.GetKeyDown(KeyCode.H))
     {
-      GameObject.Find("Canvas/UI").GetComponent<CanvasGroup>().alpha = 1 - GameObject.Find("Canvas/UI").GetComponent<CanvasGroup>().alpha;
+      GameObject.Find("UI").GetComponent<CanvasGroup>().alpha = 1 - GameObject.Find("UI").GetComponent<CanvasGroup>().alpha;
     }
     if (Input.GetKeyDown(KeyCode.V))
-      if (GameObject.Find("Canvas/Menu").GetComponent<CanvasGroup>().alpha == 0)
+      if (GameObject.Find("Menu").GetComponent<CanvasGroup>().alpha == 0)
       {
-        GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().alpha = 1 - GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().alpha;
-        GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().interactable = !GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().interactable;
-        GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().blocksRaycasts = !GameObject.Find("Canvas/Setting").GetComponent<CanvasGroup>().blocksRaycasts;
+        GameObject.Find("Setting").GetComponent<CanvasGroup>().alpha = 1 - GameObject.Find("Setting").GetComponent<CanvasGroup>().alpha;
+        GameObject.Find("Setting").GetComponent<CanvasGroup>().interactable ^= true;
+        GameObject.Find("Setting").GetComponent<CanvasGroup>().blocksRaycasts ^= true;
+        CameraMove.enable ^= true;
       }
   }
 }

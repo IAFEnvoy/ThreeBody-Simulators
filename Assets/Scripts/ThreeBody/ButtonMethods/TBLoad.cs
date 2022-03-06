@@ -12,7 +12,7 @@ public class TBLoad : MonoBehaviour
 
     private void Click()
     {
-        if (GameObject.Find("Canvas/Starter").GetComponent<CanvasGroup>().alpha == 0)
+        if (GameObject.Find("Starter").GetComponent<CanvasGroup>().alpha == 0)
             return;
         
         OpenFileName openFileName = new OpenFileName();
@@ -30,39 +30,39 @@ public class TBLoad : MonoBehaviour
             return;
 
         StreamReader sr = new StreamReader(openFileName.file);
-        GameObject.Find("Canvas/Starter/m1").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/m2").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/m3").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/m1").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/m2").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/m3").GetComponent<InputField>().text = sr.ReadLine();
 
-        GameObject.Find("Canvas/Starter/x1").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/x2").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/x3").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/xp").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/x1").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/x2").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/x3").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/xp").GetComponent<InputField>().text = sr.ReadLine();
 
-        GameObject.Find("Canvas/Starter/y1").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/y2").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/y3").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/yp").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/y1").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/y2").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/y3").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/yp").GetComponent<InputField>().text = sr.ReadLine();
 
-        GameObject.Find("Canvas/Starter/z1").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/z2").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/z3").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/zp").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/z1").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/z2").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/z3").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/zp").GetComponent<InputField>().text = sr.ReadLine();
 
-        GameObject.Find("Canvas/Starter/vx1").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/vx2").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/vx3").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/vxp").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vx1").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vx2").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vx3").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vxp").GetComponent<InputField>().text = sr.ReadLine();
 
-        GameObject.Find("Canvas/Starter/vy1").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/vy2").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/vy3").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/vyp").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vy1").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vy2").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vy3").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vyp").GetComponent<InputField>().text = sr.ReadLine();
 
-        GameObject.Find("Canvas/Starter/vz1").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/vz2").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/vz3").GetComponent<InputField>().text = sr.ReadLine();
-        GameObject.Find("Canvas/Starter/vzp").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vz1").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vz2").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vz3").GetComponent<InputField>().text = sr.ReadLine();
+        GameObject.Find("Starter/vzp").GetComponent<InputField>().text = sr.ReadLine();
 
         sr.Close();
         sr.Dispose();

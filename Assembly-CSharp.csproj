@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Common\SeeCamera.cs" />
      <Compile Include="Assets\Scripts\Common\ButtonMethods\Exit.cs" />
+     <Compile Include="Assets\Scripts\DarkForest\ButtonMethods\DFAccept.cs" />
      <Compile Include="Assets\Scripts\ThreeBody\BoomControl.cs" />
      <Compile Include="Assets\Scripts\DarkForest\Items\Datas.cs" />
      <Compile Include="Assets\Scripts\Common\TextControl\TopLeftCorner.cs" />
@@ -45,29 +46,26 @@
      <Compile Include="Assets\Scripts\Common\TextControl\TopRightCorner.cs" />
      <Compile Include="Assets\Scripts\Common\ButtonMethods\ShowMenu.cs" />
      <Compile Include="Assets\Scripts\DarkForest\Items\Biaxial_foil.cs" />
-     <Compile Include="Assets\Scripts\DarkForest\global.cs" />
      <Compile Include="Assets\Scripts\DarkForest\Items\Stars.cs" />
-     <Compile Include="Assets\Scripts\DarkForest\SettingMethods\Accept.cs" />
      <Compile Include="Assets\Scripts\DarkForest\MessageControl.cs" />
-     <Compile Include="Assets\Scripts\ThreeBodyOnPlanet\TBPCamera.cs" />
      <Compile Include="Assets\Scripts\DarkForest\HighLightControls\HighLightControlGreen.cs" />
      <Compile Include="Assets\Scripts\Common\Rotate.cs" />
      <Compile Include="Assets\Scripts\DarkForest\SettingMethods\GetSliderValue.cs" />
      <Compile Include="Assets\Scripts\Main\OpenScene.cs" />
      <Compile Include="Assets\Scripts\DarkForest\ButtonMethods\DFRestart.cs" />
      <Compile Include="Assets\Scripts\Common\ButtonMethods\Resume.cs" />
-     <Compile Include="Assets\Scripts\ThreeBody\Global.cs" />
      <Compile Include="Assets\Scripts\Common\CameraMove.cs" />
      <Compile Include="Assets\Scripts\DarkForest\HighLightControls\HighLightControlYellow.cs" />
+     <Compile Include="Assets\Scripts\ThreeBody\TBGlobal.cs" />
      <Compile Include="Assets\Scripts\Common\ButtonMethods\Restart.cs" />
      <Compile Include="Assets\Scripts\ThreeBody\ButtonMethods\TBInitAccept.cs" />
      <Compile Include="Assets\Scripts\DarkForest\DFKeyBoardControl.cs" />
      <Compile Include="Assets\Scripts\Common\TextControl\BottomRightCorner.cs" />
+     <Compile Include="Assets\Scripts\ThreeBody\Land.cs" />
      <Compile Include="Assets\Scripts\Common\MusicControl.cs" />
      <Compile Include="Assets\Scripts\DarkForest\Items\Binary.cs" />
      <Compile Include="Assets\Scripts\ThreeBody\GravityControl.cs" />
      <Compile Include="Assets\Scripts\Common\FontControl.cs" />
-     <Compile Include="Assets\Scripts\ThreeBodyOnPlanet\TBPCalculate.cs" />
      <Compile Include="Assets\Scripts\ThreeBody\TBCalculate.cs" />
      <Compile Include="Assets\Scripts\Common\System\LocalDialog.cs" />
      <Compile Include="Assets\Scripts\Common\System\OpenFileName.cs" />
@@ -76,6 +74,9 @@
      <Compile Include="Assets\Scripts\ThreeBody\TBKeyBoardControl.cs" />
      <Compile Include="Assets\Scripts\ThreeBody\ButtonMethods\TBSave.cs" />
      <Compile Include="Assets\Scripts\DarkForest\HighLightControls\HighLightControlRed.cs" />
+     <Compile Include="Assets\Scripts\DarkForest\DFGlobal.cs" />
+     <Compile Include="Assets\Scripts\Common\ButtonMethods\ReturnToMain.cs" />
+     <Compile Include="Assets\Scripts\Common\OpenLink.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Program Files\Unity 2020.3.30f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

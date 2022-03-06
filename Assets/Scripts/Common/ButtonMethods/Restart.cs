@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Restart : MonoBehaviour
 {
   public GameObject starter, menu;
-  
+
   private void Start()
   {
     GetComponent<Button>().onClick.AddListener(Click);

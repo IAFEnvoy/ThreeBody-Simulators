@@ -12,7 +12,7 @@ public class TBSave : MonoBehaviour
 
     private void Click()
     {
-        if (GameObject.Find("Canvas/Starter").GetComponent<CanvasGroup>().alpha == 0)
+        if (GameObject.Find("Starter").GetComponent<CanvasGroup>().alpha == 0)
             return;
 
         OpenFileName openFileName = new OpenFileName();
@@ -34,39 +34,39 @@ public class TBSave : MonoBehaviour
 
         StreamWriter sw = new StreamWriter(openFileName.file, false);
 
-        sw.WriteLine(GameObject.Find("Canvas/Starter/m1/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/m2/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/m3/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/m1/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/m2/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/m3/Text").GetComponent<Text>().text);
 
-        sw.WriteLine(GameObject.Find("Canvas/Starter/x1/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/x2/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/x3/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/xp/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/x1/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/x2/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/x3/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/xp/Text").GetComponent<Text>().text);
 
-        sw.WriteLine(GameObject.Find("Canvas/Starter/y1/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/y2/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/y3/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/yp/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/y1/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/y2/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/y3/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/yp/Text").GetComponent<Text>().text);
 
-        sw.WriteLine(GameObject.Find("Canvas/Starter/z1/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/z2/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/z3/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/zp/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/z1/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/z2/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/z3/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/zp/Text").GetComponent<Text>().text);
 
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vx1/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vx2/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vx3/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vxp/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vx1/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vx2/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vx3/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vxp/Text").GetComponent<Text>().text);
 
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vy1/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vy2/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vy3/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vyp/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vy1/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vy2/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vy3/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vyp/Text").GetComponent<Text>().text);
 
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vz1/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vz2/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vz3/Text").GetComponent<Text>().text);
-        sw.WriteLine(GameObject.Find("Canvas/Starter/vzp/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vz1/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vz2/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vz3/Text").GetComponent<Text>().text);
+        sw.WriteLine(GameObject.Find("Starter/vzp/Text").GetComponent<Text>().text);
 
         sw.Close();
         sw.Dispose();

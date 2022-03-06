@@ -4,19 +4,14 @@ using UnityEngine.UI;
 
 public class GetSliderValue : MonoBehaviour
 {
-    public Slider slider;
-    public bool toboolvalue = false;
-    public int rounddigit = 0;
-    Text text;
-    
-    void Start()
-    {
-        text = this.GetComponent<Text>();
-    }
+  public int RoundDigit = 0;
+  public bool ToBoolValue = false;
 
-    void Update()
-    {
-        if (toboolvalue) text.text = slider.value == 0 ? "否" : "是";
-        else text.text = Math.Round(slider.value, rounddigit).ToString();
-    }
+  void Update()
+  {
+    if (GameObject.Find("Setting/"+name+"/Slider") == null) return;
+    if (GameObject.Find("Setting/"+name+"/Value") == null) return;
+    if (ToBoolValue) GameObject.Find("Setting/"+name+"/Value").GetComponent<Text>().text = GameObject.Find("Setting/"+name+"/Slider").GetComponent<Slider>().value == 0 ? "否" : "是";
+    else GameObject.Find("Setting/"+name+"/Value").GetComponent<Text>().text = Math.Round(GameObject.Find("Setting/"+name+"/Slider").GetComponent<Slider>().value, RoundDigit).ToString();
+  }
 }

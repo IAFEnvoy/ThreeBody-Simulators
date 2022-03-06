@@ -11,7 +11,7 @@ class Stars
         this.x = x;
         this.y = y;
         this.z = z;
-        this.score = global.startscore;
+        this.score = DFGlobal.startscore;
         this.life = true;
         this.type = type;
         this.isout = isout;
@@ -20,7 +20,7 @@ class Stars
         this.helpcnt = 0;
         this.helplist = new List<int>();
         this.techboomcnt = 0;
-        this.time2d = global.cooldown2d;
+        this.time2d = DFGlobal.cooldown2d;
 
         if (this.type == 1) this.isout = true;//攻击性文明默认外向
     }
