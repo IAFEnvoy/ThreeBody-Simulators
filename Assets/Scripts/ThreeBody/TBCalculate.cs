@@ -59,6 +59,7 @@ public class TBCalculate : MonoBehaviour
     starA.GetComponent<Rigidbody>().velocity = new Vector3((float)TBGlobal.vx1, (float)TBGlobal.vy1, (float)TBGlobal.vz1);
     starA.AddComponent<ConstantForce>();
     starA.AddComponent<BoomControl>();
+    starA.GetComponent<BoomControl>().mainCamera=GameObject.Find("Main Camera").GetComponent<Camera>();
     starA.GetComponent<Transform>().parent = GameObject.Find("Stars").GetComponent<Transform>().transform;
     s1.x = (float)TBGlobal.x1; s1.y = (float)TBGlobal.y1; s1.z = (float)TBGlobal.z1;
     s1.vx = (float)TBGlobal.vx1; s1.vy = (float)TBGlobal.vy1; s1.vz = (float)TBGlobal.vz1;
@@ -94,6 +95,7 @@ public class TBCalculate : MonoBehaviour
     starB.GetComponent<Rigidbody>().velocity = new Vector3((float)TBGlobal.vx2, (float)TBGlobal.vy2, (float)TBGlobal.vz2);
     starB.AddComponent<ConstantForce>();
     starB.AddComponent<BoomControl>();
+    starB.GetComponent<BoomControl>().mainCamera=GameObject.Find("Main Camera").GetComponent<Camera>();
     starB.GetComponent<Transform>().parent = GameObject.Find("Stars").GetComponent<Transform>().transform;
     s2.x = (float)TBGlobal.x2; s2.y = (float)TBGlobal.y2; s2.z = (float)TBGlobal.z2;
     s2.vx = (float)TBGlobal.vx2; s2.vy = (float)TBGlobal.vy2; s2.vz = (float)TBGlobal.vz2;
@@ -129,6 +131,7 @@ public class TBCalculate : MonoBehaviour
     starC.GetComponent<Rigidbody>().velocity = new Vector3((float)TBGlobal.vx3, (float)TBGlobal.vy3, (float)TBGlobal.vz3);
     starC.AddComponent<ConstantForce>();
     starC.AddComponent<BoomControl>();
+    starC.GetComponent<BoomControl>().mainCamera=GameObject.Find("Main Camera").GetComponent<Camera>();
     starC.GetComponent<Transform>().parent = GameObject.Find("Stars").GetComponent<Transform>().transform;
     s3.x = (float)TBGlobal.x3; s3.y = (float)TBGlobal.y3; s3.z = (float)TBGlobal.z3;
     s3.vx = (float)TBGlobal.vx3; s3.vy = (float)TBGlobal.vy3; s3.vz = (float)TBGlobal.vz3;
@@ -167,6 +170,7 @@ public class TBCalculate : MonoBehaviour
     planet.GetComponent<Rigidbody>().velocity = new Vector3((float)TBGlobal.vxp, (float)TBGlobal.vyp, (float)TBGlobal.vzp);
     planet.AddComponent<ConstantForce>();
     planet.AddComponent<BoomControl>();
+    planet.GetComponent<BoomControl>().mainCamera=GameObject.Find("Main Camera").GetComponent<Camera>();
     planet.GetComponent<Transform>().parent = GameObject.Find("Stars").GetComponent<Transform>().transform;
     sp.x = (float)TBGlobal.xp; sp.y = (float)TBGlobal.yp; sp.z = (float)TBGlobal.zp;
     sp.vx = (float)TBGlobal.vxp; sp.vy = (float)TBGlobal.vyp; sp.vz = (float)TBGlobal.vzp;

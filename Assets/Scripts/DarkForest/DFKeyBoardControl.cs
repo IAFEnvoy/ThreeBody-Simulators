@@ -69,9 +69,7 @@ public class DFKeyBoardControl : MonoBehaviour
       }
     }
     if (Input.GetKeyDown(KeyCode.H))
-    {
       GameObject.Find("UI").GetComponent<CanvasGroup>().alpha = 1 - GameObject.Find("UI").GetComponent<CanvasGroup>().alpha;
-    }
     if (Input.GetKeyDown(KeyCode.V))
       if (GameObject.Find("Menu").GetComponent<CanvasGroup>().alpha == 0)
       {

@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraMove : MonoBehaviour
 {
@@ -28,6 +29,22 @@ public class CameraMove : MonoBehaviour
   private void Update()
   {
     if (!enable) return;
+    if ((Input.touchCount == 2))
+    {
+      if (Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(1).phase == TouchPhase.Moved)
+        if (touchDistance == -1)
+          touchDistance = Vector2.Distance(Input.GetTouch(0).position, Input.GetTouch(1).position);
+        else
+        {
+          float newDistance = Vector2.Distance(Input.GetTouch(0).position, Input.GetTouch(1).position);
+          distance -= (newDistance - touchDistance) * 0.5;
+          touchDistance = newDistance;
+        }
+      else
+        touchDistance = -1;
+      setplace((float)Math.Cos(a) * (float)Math.Cos(b) * (float)distance, (float)Math.Sin(b) * (float)distance, (float)Math.Sin(a) * (float)Math.Cos(b) * (float)distance);
+      return;
+    }
     if (Input.GetMouseButtonDown(0))
     {
       now = Input.mousePosition;
@@ -56,17 +73,6 @@ public class CameraMove : MonoBehaviour
       if (distance < 50)
         distance = 50;
     }
-    if ((Input.touchCount == 2) && (Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(1).phase == TouchPhase.Moved))
-      if (touchDistance == -1)
-        touchDistance = Vector2.Distance(Input.GetTouch(0).position, Input.GetTouch(1).position);
-      else
-      {
-        float newDistance = Vector2.Distance(Input.GetTouch(0).position, Input.GetTouch(1).position);
-        distance -= (newDistance - touchDistance) * 20;
-        touchDistance = newDistance;
-      }
-    else
-      touchDistance = -1;
     setplace((float)Math.Cos(a) * (float)Math.Cos(b) * (float)distance, (float)Math.Sin(b) * (float)distance, (float)Math.Sin(a) * (float)Math.Cos(b) * (float)distance);
   }
 }

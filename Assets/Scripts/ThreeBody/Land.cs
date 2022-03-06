@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Land : MonoBehaviour
 {
-  bool enable = false;
+  public static bool enable = false;
   enum RotationAxes { MouseXAndY, MouseX, MouseY }
   RotationAxes axes = RotationAxes.MouseXAndY;
   float sensitivityX = 10, sensitivityY = 10;
