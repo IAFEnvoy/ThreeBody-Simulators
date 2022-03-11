@@ -21,7 +21,6 @@ public class Land : MonoBehaviour
     {
       CameraMove.enable = false;
       if (Input.GetMouseButton(0))
-      {
         if (axes == RotationAxes.MouseXAndY)
         {
           float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
@@ -37,7 +36,6 @@ public class Land : MonoBehaviour
           rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
           transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
         }
-      }
       transform.position = new Vector3(1, 0, 0) + planet.transform.position;
     }
     else

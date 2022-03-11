@@ -13,6 +13,13 @@ public class OpenLink : MonoBehaviour
 
   void Click()
   {
-    Process.Start(LinkURL);
+    if (Application.platform == RuntimePlatform.Android)
+    {
+      AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+      AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
+      jo.Call("openURL", LinkURL);
+    }
+    else
+      Process.Start(LinkURL);
   }
 }
