@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.049024954, g: 0.04557486, b: 0.049791083, a: 1}
+  m_IndirectSpecularColor: {r: 0.04674343, g: 0.043355145, b: 0.048718974, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -755,7 +755,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Version Beta 1.0  |  Code by IAFEnvoy
+  m_Text: Version Release 1.0  |  Code by IAFEnvoy
 --- !u!222 &548732994
 CanvasRenderer:
   m_ObjectHideFlags: 0

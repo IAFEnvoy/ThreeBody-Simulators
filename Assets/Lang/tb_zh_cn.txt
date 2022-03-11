@@ -1,0 +1,9 @@
+Menu/Resume/Text=继续
+Menu/Restart/Text=重新开始
+Menu/Exit/Text=退出
+Starter/Text1=质量         x坐标        y坐标         z坐标     x方向速度  y方向速度  z方向速度
+Starter/Text2=恒星A\n恒星B\n恒星C\n行星
+Starter/Accept/Text=确认
+Starter/Load/Text=加载预设
+Starter/Save/Text=保存预设
+Starter/Cancel/Text=取消
